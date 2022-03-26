@@ -48,15 +48,7 @@ export const Nav = () => {
           <div className="navbar-end">
             <a className="btn btn-ghost normal-case text-xl">Women</a>
           </div>
-          <div className="navbar-end">
-            {/* <a>
-              <div className="avatar">
-                <div className="w-24 s:w-10 mask mask-squircle">
-                  <img src="https://api.lorem.space/image/face?hash=47449" />
-                </div>
-              </div>
-            </a> */}
-          </div>
+          <div className="navbar-end"></div>
           <div className="navbar-end">
             <button className="btn btn-ghost btn-circle">
               <svg
