@@ -6,7 +6,6 @@ export const Card = () => {
             <img
               src="https://api.lorem.space/image/shoes?w=400&h=225"
               alt="car!"
-              
             />
           </figure>
           <div className="card-body">

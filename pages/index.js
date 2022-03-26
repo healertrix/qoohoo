@@ -4,12 +4,23 @@ import styles from '../styles/Home.module.css'
 import { Nav } from '../components/navbar'
 import { Hero } from '../components/hero'
 import { Card } from '../components/card'
-import {Footer} from '../components/footer'
+import { Footer } from '../components/footer'
+import { gsap } from "gsap";
+ import React from "react";
+
 export default function Home() {
+
+  const boxRef = React.createRef();
+
+
+// wait until DOM has been rendered
+React.useEffect(() => {
+  gsap.to(".box", { rotation: "+=360" });
+});
   return (
     <>
       <Nav />
-      <Hero/>
+      <Hero />
       <Footer />
     </>
   );
