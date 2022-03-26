@@ -25,7 +25,7 @@ export const Hero = () => {
     gsap.to(".cbody", { y: "-25vw", opacity: "1", duration: 1.3 });
     gsap.to(".cbodyy", { y: "-35vw", opacity: "1", duration: 1.3 });
 
-    gsap.to(".addbtn", { opacity: 1, duration: 1 });
+    gsap.to(".addbtn", { y: "-15vw", opacity: 1, duration: 1 });
   }
 
   return (
@@ -61,10 +61,20 @@ export const Hero = () => {
               className="hover:-translate-y-1 hover:scale-105 duration-300 drop-shadow-md	"
             />
           </div>
-
+          <div
+            className="addbtn drop-shadow-md box ml-2"
+            style={{ display: open ? "flex" : "none", opacity: 0 }}
+          >
+            <img
+              src="/addbttn.svg"
+              alt=""
+              width="150"
+              height="150"
+              className="hover:-translate-y-1 hover:scale-105 duration-300 drop-shadow-md	"
+            />
+          </div>
           <div className="clothname flex-col  lg:flex-row-reverse 	">
             <p className="text-5xl "> Yellow Hoodie</p>
-            <div></div>
           </div>
         </div>
       </div>
