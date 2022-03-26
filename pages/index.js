@@ -22,7 +22,7 @@ React.useEffect(() => {
     <>
       <Nav />
       <Hero />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 
