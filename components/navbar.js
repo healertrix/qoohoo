@@ -50,8 +50,8 @@ export const Nav = () => {
           </div>
           <div className="navbar-end">
             <a>
-              <div class="avatar">
-                <div class="w-24 s:w-10 mask mask-squircle">
+              <div className="avatar">
+                <div className="w-24 s:w-10 mask mask-squircle">
                   <img src="https://api.lorem.space/image/face?hash=47449" />
                 </div>
               </div>
@@ -92,8 +92,7 @@ export const Nav = () => {
                 </svg>
                 <span className="badge badge-xs badge-primary indicator-item"></span>
               </div>
-                    </button>
-                    
+            </button>
           </div>
         </div>
       </>
