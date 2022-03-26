@@ -3,7 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Nav } from '../components/navbar'
 import { Hero } from '../components/hero'
-import { Card } from '../components/card'
+import { ContentCard } from "../components/contentCard";
+
 import { Footer } from '../components/footer'
 import { gsap } from "gsap";
  import React from "react";

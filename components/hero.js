@@ -1,7 +1,7 @@
 import React from "react";
-
+import { Corsel } from "../components/coursel";
 import { Card } from "./card";
-
+import { ContentCard } from "./contentCard";
 
 import { gsap } from "gsap";
 export const Hero = () => {
@@ -10,14 +10,14 @@ export const Hero = () => {
 
   const [open, setOpen] = React.useState(false);
 
-
   function activateLasers(e) {
     setOpen(!open);
     gsap.to(".box", { rotation: "+=360", y: "5vw", opacity: "0" });
     gsap.to(".modelImage", { x: "25vw", duration: 1, scale: 1.1 });
     gsap.to(".cards", { x: "15vw", opacity: "0" });
     gsap.to(".clothname", { y: "-15vw" });
-    
+    gsap.to(".cbody", { y: "-15vw", opacity: "1" });
+
     gsap.to(".addbtn", { opacity: 1, duration: 1 });
   }
 
@@ -48,17 +48,18 @@ export const Hero = () => {
           </div>
 
           <div className="clothname flex-col  lg:flex-row-reverse 	">
-            <p className="text-5xl "> Yellow Hoodie</p>{" "}
-            <div className="flex content-center">
-              <button
-                className="btn btn-active btn-secondary addbtn ml-20 mt-5	"
-                style={{ display: open ? "block" : "none", opacity: 0 }}
-              >
-                ADD Item
-              </button>
-            </div>
+            <p className="text-5xl "> Yellow Hoodie</p>
+            <div></div>
           </div>
         </div>
+      </div>
+      <div
+        className="flex gap-4 cbody ml-2 "
+        style={{ display: open ? "flex" : "none", opacity: 0 }}
+      >
+        <Corsel />
+        <Corsel />
+        <Corsel />
       </div>
     </>
   );
