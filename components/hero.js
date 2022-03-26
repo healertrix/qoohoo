@@ -31,16 +31,16 @@ export const Hero = () => {
   return (
     <>
       <div className="hero min-h-screen bg-base-200 ">
-        <div className=" cards  " style={{ marginLeft: "90vw" }}>
+        <div className=" cards  " style={{ marginLeft: "78vw" }}>
           <img
             src={
-              "https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+              "https://images.unsplash.com/photo-1536766820879-059fec98ec0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             }
             className="max-w-xs		 rounded-lg shadow-xl "
           />
         </div>
         <div className="hero-content flex-col lg:flex-row-reverse ">
-          <div className="flex-row ">
+          <div className="flex-row " style={{ marginRight: "12vw" }}>
             <div className="flex-row mb-5 gap-5	cards ">
               <Card />
             </div>
