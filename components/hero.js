@@ -57,13 +57,39 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="flex-col m-10 content-center justify-center gap-1">
+      <div
+        className="flex-col m-10 content-center justify-center gap-1"
+        style={{ display: open ? "flex" : "none", opacity: 1 }}
+      >
         <p className="text-4xl cbodyy ml-20">$87</p>
         <p className="cbodyy ml-20">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vel
           obcaecati{" "}
         </p>
         <p className="text-2xl cbodyy ml-20">Select Size</p>
+        <div className="ml-20 flex gap-1 mt-3 cbodyy">
+          <img
+            src="/L.svg"
+            alt=""
+            className="hover:-translate-y-1 hover:scale-105 duration-300 drop-shadow-md	"
+            width="35"
+            height="35"
+          />
+          <img
+            src="/S.svg"
+            alt=""
+            className="hover:-translate-y-1 hover:scale-105 duration-300 drop-shadow-md"
+            width="35"
+            height="35"
+          />
+          <img
+            src="/M.svg"
+            alt=""
+            className="hover:-translate-y-1 hover:scale-105 duration-300 drop-shadow-md	"
+            width="35"
+            height="35"
+          />
+        </div>
       </div>
       <div
         className="flex gap-4 cbody ml-2 "
