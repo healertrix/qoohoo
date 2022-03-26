@@ -3,37 +3,18 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Nav } from '../components/navbar'
 import { Hero } from '../components/hero'
-import {Card} from '../components/card'
+import { Card } from '../components/card'
+import {Footer} from '../components/footer'
 export default function Home() {
   return (
     <>
-      <div class="relative bg-white" style="width: 1440px; height: 1024px;">
-        <img
-          class="absolute"
-          style="width: 419px; height: 730px; left: 766px; top: 214px;"
-          src="https://via.placeholder.com/419x730"
-        />
-        <p class="absolute text-5xl" style="left: 297px; top: 499px;">
-          Old Gold Hoodie
-          <br /> Sweatshirt
-          <br />
-        </p>
-        <img
-          class="w-20 h-20 absolute"
-          style="left: 728px; top: 516px;"
-          src="https://via.placeholder.com/75x75"
-        />
-        <div
-          class="w-44 h-36 absolute bg-gray-300 rounded-lg"
-          style="left: 1146px; top: 404px;"
-        />
-        <div
-          class="w-44 h-36 absolute bg-gray-300 rounded-lg"
-          style="left: 1146px; top: 715px;"
-        />
-      </div>
+      <Nav />
+      <Hero/>
+      <Footer />
     </>
   );
+
+       
 }
 
 // import React from "react";
