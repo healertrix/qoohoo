@@ -4,7 +4,7 @@ export const Corsel = () => {
       <div className="card w-96 bg-base-100 shadow-xl   ">
         <figure>
           <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
+            src={"https://api.lorem.space/image/fashion?w=400&h=225"}
             alt="models"
           />
         </figure>

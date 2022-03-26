@@ -9,14 +9,21 @@ export const Hero = () => {
   //   gsap.to(".box", { rotation: "+=300" });
 
   const [open, setOpen] = React.useState(false);
-
+  const [model, setModel] = React.useState("/model.jpg");
+ function handleClick ()  {
+   setModel(
+     "https://api.lorem.space/image/fashion?w=400&h=225"
+   );
+ };
+  
   function activateLasers(e) {
     setOpen(!open);
     gsap.to(".box", { rotation: "+=360", y: "5vw", opacity: "0" });
     gsap.to(".modelImage", { x: "25vw", duration: 1, scale: 1.1 });
     gsap.to(".cards", { x: "15vw", opacity: "0" });
     gsap.to(".clothname", { y: "-15vw" });
-    gsap.to(".cbody", { y: "-15vw", opacity: "1" });
+    gsap.to(".cbody", { y: "-25vw", opacity: "1", duration: 1.3 });
+    gsap.to(".cbodyy", { y: "-35vw", opacity: "1", duration: 1.3 });
 
     gsap.to(".addbtn", { opacity: 1, duration: 1 });
   }
@@ -34,10 +41,7 @@ export const Hero = () => {
             </div>
           </div>
           <div className="modelImage">
-            <img
-              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-              className="max-w-md rounded-lg shadow-2xl"
-            />
+            <img src={model} className="max-w-md rounded-lg shadow-2xl" />
           </div>
           <div className=" box " onClick={activateLasers}>
             <img
@@ -53,13 +57,22 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+      <div className="flex-col m-10 content-center justify-center gap-1">
+        <p className="text-4xl cbodyy ml-20">$87</p>
+        <p className="cbodyy ml-20">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vel
+          obcaecati{" "}
+        </p>
+        <p className="text-2xl cbodyy ml-20">Select Size</p>
+      </div>
       <div
         className="flex gap-4 cbody ml-2 "
         style={{ display: open ? "flex" : "none", opacity: 0 }}
+        onClick={handleClick}
       >
-        <Corsel />
-        <Corsel />
-        <Corsel />
+        <Corsel src="/moely1.jpg" />
+        <Corsel src="/model2.jpg" />
+        <Corsel src="/moely1.jpg" />
       </div>
     </>
   );
