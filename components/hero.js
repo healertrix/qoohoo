@@ -34,7 +34,7 @@ export const Hero = () => {
         <div className=" cards  " style={{ marginLeft: "90vw" }}>
           <img
             src={
-              "https://images.unsplash.com/photo-1564485377539-4af72d1f6a2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+              "https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             }
             className="max-w-xs		 rounded-lg shadow-xl "
           />
