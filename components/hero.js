@@ -39,8 +39,10 @@ export const Hero = () => {
               className="hover:-translate-y-1 hover:scale-105 duration-300 drop-shadow-md	"
             />
           </div>
+          
+          {/* <button class="btn btn-active btn-secondary">ADD</button> */}
 
-          <p className="text-5xl clothname" > Yellow Hoodie</p>
+          <p className="text-5xl clothname"> Yellow Hoodie</p>
         </div>
       </div>
     </>
