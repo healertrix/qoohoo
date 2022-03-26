@@ -1,17 +1,24 @@
-import { Card } from "./card";
-import { gsap } from "gsap";
 import React from "react";
+
+import { Card } from "./card";
+
+
+import { gsap } from "gsap";
 export const Hero = () => {
   // React.useEffect(() => {
   //   gsap.to(".box", { rotation: "+=300" });
 
-  // });
+  const [open, setOpen] = React.useState(false);
+
 
   function activateLasers(e) {
+    setOpen(!open);
     gsap.to(".box", { rotation: "+=360", y: "5vw", opacity: "0" });
-    gsap.to(".modelImage", { x: "25vw", duration: 1 });
+    gsap.to(".modelImage", { x: "25vw", duration: 1, scale: 1.1 });
     gsap.to(".cards", { x: "15vw", opacity: "0" });
-    gsap.to(".clothname",{y:"-15vw"});
+    gsap.to(".clothname", { y: "-15vw" });
+    
+    gsap.to(".addbtn", { opacity: 1, duration: 1 });
   }
 
   return (
@@ -39,12 +46,20 @@ export const Hero = () => {
               className="hover:-translate-y-1 hover:scale-105 duration-300 drop-shadow-md	"
             />
           </div>
-          
-          {/* <button class="btn btn-active btn-secondary">ADD</button> */}
 
-          <p className="text-5xl clothname"> Yellow Hoodie</p>
+          <div className="clothname flex-col  lg:flex-row-reverse 	">
+            <p className="text-5xl "> Yellow Hoodie</p>{" "}
+            <div className="flex content-center">
+              <button
+                className="btn btn-active btn-secondary addbtn ml-20 mt-5	"
+                style={{ display: open ? "block" : "none", opacity: 0 }}
+              >
+                ADD Item
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
-};
+};;
