@@ -1,18 +1,15 @@
 export const Card = () => {
     return (
       <>
-        <div className="card w-35 bg-base-80 shadow-xl m-2 card-side	">
-          <figure>
-            <img
-              src="https://media.istockphoto.com/photos/pair-of-stylish-sneakers-isolated-on-white-background-white-casual-picture-id1248566148?k=20&m=1248566148&s=170667a&w=0&h=Lom1xUV8pfz2kFmzepcEzn52mlEzWj5d2TMDFKlhOsc="
-              alt="Shoes"
-              width="60"
-              height="60"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">$87</h2>
-            <p>Air Jordans</p>
+        <div
+          class=" w-60 h-40 rounded-2xl	card 	mr-2 shadow-xl"
+          style={{ backgroundSize: "10 10px" }}
+        >
+          <div class="m-3 p-5">
+            <p className="mt-2">
+              Half dome palover <br /> shoes
+            </p>
+            <h2 class="card-title">$87</h2>
           </div>
         </div>
       </>
