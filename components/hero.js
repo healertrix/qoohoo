@@ -5,8 +5,12 @@ import { ContentCard } from "./contentCard";
 
 import { gsap } from "gsap";
 export const Hero = () => {
+  const boxRef = React.useRef();
   // React.useEffect(() => {
   //   gsap.to(".box", { rotation: "+=300" });
+  React.useEffect(() => {
+    gsap.to(".summer", {  opacity: 1, duration: 1 });
+  })
 
   const [open, setOpen] = React.useState(false);
   const [model, setModel] = React.useState("/model.jpg");
@@ -26,21 +30,37 @@ export const Hero = () => {
     gsap.to(".cbodyy", { y: "-35vw", opacity: "1", duration: 1.3 });
 
     gsap.to(".addbtn", { y: "-15vw", opacity: 1, duration: 1 });
+    
   }
 
   return (
     <>
-      <div className="hero min-h-screen bg-base-200 	 " style={{background:"white"}}>
-        <div className=" cards  " style={{ marginLeft: "78vw" }}>
+      <div
+        className="hero min-h-screen bg-base-200 	 "
+        style={{ background: "white" }}
+      >
+        <div className=" cards  " style={{ marginLeft: "88vw" }}>
           <img
-            src={
-              "https://images.unsplash.com/photo-1536766820879-059fec98ec0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-            }
-            className="max-w-xs		 rounded-lg shadow-xl "
+            src={"/man_model.jpg"}
+            className="max-w-xs		 rounded-lg shadow-xl z-0 "
+          />
+        </div>
+        <div className="summer">
+          <img
+            src={"/summer.svg"}
+            className="max-w-xs		rounded-lg shadow-xl z-1 cards "
+            style={{ marginLeft: "65vw" ,opacity:1.2}}
+          />
+        </div>
+        <div>
+          <img
+            src={"/bar.svg"}
+            className="max-w-xs		rounded-lg cards "
+            style={{ marginLeft: "55vw", height: "100%"}}
           />
         </div>
         <div className="hero-content flex-col lg:flex-row-reverse ">
-          <div className="flex-row " style={{ marginRight: "12vw" }}>
+          <div className="flex-row " style={{ marginRight: "15vw" }}>
             <div className="flex-row mb-5 gap-5	cards ">
               <Card />
             </div>
