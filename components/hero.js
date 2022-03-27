@@ -11,12 +11,29 @@ export const Hero = () => {
   const [model, setModel] = React.useState("/modelb.jpg");
   function handleClick(e) {
     setModel("/modelblack.jpg");
+    gsap.fromTo(
+      ".themodel",
+      { opacity: 0, x: "-3.5vw" },
+      { opacity: 1, duration: 1, x: "0" }
+    );
   }
   function handleClickk(e) {
     setModel("/man_model.jpg");
+    gsap.fromTo(
+      ".themodel",
+      { opacity: 0, x: "-3.5vw" },
+      { opacity: 1, duration: 1, x: "0" }
+    );
+
   }
   function handleClickkk(e) {
     setModel("/modelemo.jpg");
+    gsap.fromTo(
+      ".themodel",
+      { opacity: 0, x: "-3.5vw" },
+      { opacity: 1, duration: 1, x: "0" }
+    );
+
   }
   function activateLasers(e) {
     setOpen(!open);
@@ -81,7 +98,7 @@ export const Hero = () => {
               src={
                 model
               }
-              className="max-w-md rounded-lg shadow-2xl"
+              className="max-w-md rounded-lg shadow-2xl themodel"
             />
           </div>
           <div className=" box " onClick={activateLasers}>
