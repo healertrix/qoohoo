@@ -12,18 +12,18 @@ export const Hero = () => {
 
   const [open, setOpen] = React.useState(false);
   const [model, setModel] = React.useState("/model.jpg");
- function handleClick ()  {
+ function handleClick (e)  {
    setModel(
-     "https://api.lorem.space/image/fashion?w=400&h=225"
+     "/man_model.jpg"
    );
  };
   
   function activateLasers(e) {
     setOpen(!open);
-    gsap.to(".box", { rotation: "+=460", y: "5vw", opacity: "0" });
+    gsap.to(".box", { rotation: "+=360", y: "5vw", opacity: "0" });
     gsap.to(".modelImage", { x: "25vw", duration: 1, scale: 1.1 });
     gsap.to(".cards", { x: "15vw", opacity: "0" });
-    gsap.to(".clothname", { y: "-15vw" });
+    gsap.to(".clothname", { y: "-15vw",x:"-6vw" });
     gsap.to(".cbody", { y: "-25vw", opacity: "1", duration: 1.3 });
     gsap.to(".cbodyy", { y: "-35vw", opacity: "1", duration: 1.3 });
 
@@ -108,7 +108,7 @@ export const Hero = () => {
         className="flex-col m-10 content-center justify-center gap-1"
         style={{ display: open ? "flex" : "none", opacity: 1 }}
       >
-        <p className="text-4xl cbodyy ml-20">$87</p>
+        <p className="text-4xl cbodyy ml-20 mb-3">$67</p>
         <p className="cbodyy ml-20">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vel
           obcaecati{" "}
@@ -136,16 +136,23 @@ export const Hero = () => {
             width="35"
             height="35"
           />
+          <p
+            className="ml-10 text-xl "
+            style={{ color: "rgba(124, 181, 53, 1)" }}
+          >
+            {" "}
+            Size Guide
+          </p>
         </div>
       </div>
       <div
-        className="flex gap-4 cbody ml-2 "
+        className="flex gap-4 cbody ml-2 mr-5 "
         style={{ display: open ? "flex" : "none", opacity: 0 }}
         onClick={handleClick}
       >
-        <Corsel src="/moely1.jpg" />
-        <Corsel src="/model2.jpg" />
-        <Corsel src="/moely1.jpg" />
+        <Corsel src="/man_model.jpg" />
+        <Corsel src="/man_model.jpg" />
+        <Corsel src="/man_model.jpg" />
       </div>
     </>
   );

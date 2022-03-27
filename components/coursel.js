@@ -1,12 +1,9 @@
-export const Corsel = () => {
+export const Corsel = ({src}) => {
   return (
     <>
-      <div className="card w-96 bg-base-100 shadow-xl   ">
+      <div className=" w-40 h-40 rounded-5xl	 	mr-6 card hover:scale-125  duration-300 drop-shadow-md	 shadow-xl flex">
         <figure>
-          <img
-            src={"https://api.lorem.space/image/fashion?w=400&h=225"}
-            alt="models"
-          />
+          <img src={src} />
         </figure>
       </div>
     </>
