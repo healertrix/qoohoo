@@ -6,11 +6,9 @@ import { ContentCard } from "./contentCard";
 import { gsap } from "gsap";
 export const Hero = () => {
   const boxRef = React.useRef();
-  // React.useEffect(() => {
-  //   gsap.to(".box", { rotation: "+=300" });
-  React.useEffect(() => {
-    gsap.to(".summer", {  opacity: 1, duration: 1 });
-  })
+  
+ 
+
 
   const [open, setOpen] = React.useState(false);
   const [model, setModel] = React.useState("/model.jpg");
@@ -22,7 +20,7 @@ export const Hero = () => {
   
   function activateLasers(e) {
     setOpen(!open);
-    gsap.to(".box", { rotation: "+=360", y: "5vw", opacity: "0" });
+    gsap.to(".box", { rotation: "+=460", y: "5vw", opacity: "0" });
     gsap.to(".modelImage", { x: "25vw", duration: 1, scale: 1.1 });
     gsap.to(".cards", { x: "15vw", opacity: "0" });
     gsap.to(".clothname", { y: "-15vw" });
@@ -32,6 +30,13 @@ export const Hero = () => {
     gsap.to(".addbtn", { y: "-15vw", opacity: 1, duration: 1 });
     
   }
+  
+   React.useEffect(() => {
+     gsap.to(".summer", {
+       opacity: 1,
+       duration: 2.5,
+     });
+   });
 
   return (
     <>
@@ -48,15 +53,16 @@ export const Hero = () => {
         <div className="summer">
           <img
             src={"/summer.svg"}
-            className="max-w-xs		rounded-lg shadow-xl z-1 cards "
-            style={{ marginLeft: "65vw" ,opacity:1.2}}
+            className="max-w-xs		rounded-lg shadow-xl z-1 cards summer "
+            style={{ marginLeft: "65vw", opacity: 0.1 }}
+            ref={boxRef}
           />
         </div>
         <div>
           <img
             src={"/bar.svg"}
             className="max-w-xs		rounded-lg cards "
-            style={{ marginLeft: "55vw", height: "100%"}}
+            style={{ marginLeft: "55vw", height: "100%" }}
           />
         </div>
         <div className="hero-content flex-col lg:flex-row-reverse ">
