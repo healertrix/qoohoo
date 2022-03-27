@@ -45,6 +45,8 @@ export const Hero = () => {
     gsap.to(".cbodyy", { y: "-35vw", opacity: "1", duration: 1.3 });
 
     gsap.to(".addbtn", { y: "-15vw", opacity: 1, duration: 1 });
+    gsap.to(".animecardd", {  opacity: 0, duration: 1 });
+    
   }
 
   React.useEffect(() => {
@@ -63,6 +65,11 @@ export const Hero = () => {
       ".themodel",
       { opacity: 0.5, x: "-3.5vw" },
       { opacity: 1, duration: 1, x: "0" }
+    );
+    gsap.fromTo(
+      ".animecard",
+      { opacity: 0.5, y: "3.5vw" },
+      { opacity: 1, duration: 1, y: "0" }
     );
   });
 
@@ -94,12 +101,12 @@ export const Hero = () => {
           />
         </div>
         <div className="hero-content flex-col lg:flex-row-reverse ">
-          <div className="flex-row " style={{ marginRight: "15vw" }}>
+          <div className="flex-row animecard " style={{ marginRight: "15vw" }}>
             <div className="flex-row mb-5 gap-5	cards ">
               <Card />
             </div>
             <div></div>
-            <div className="flex-row gap-5 cards	 ">
+            <div className="flex-row gap-5 cards 	 ">
               <Card />
               <div></div>
             </div>
@@ -107,9 +114,7 @@ export const Hero = () => {
 
           <div className="modelImage">
             <img
-              src={
-                model
-              }
+              src={model}
               className="max-w-md rounded-lg shadow-2xl themodel"
             />
           </div>
