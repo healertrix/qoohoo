@@ -30,7 +30,7 @@ export const Hero = () => {
 
   return (
     <>
-      <div className="hero min-h-screen bg-base-200 ">
+      <div className="hero min-h-screen bg-base-200 	 " style={{background:"white"}}>
         <div className=" cards  " style={{ marginLeft: "78vw" }}>
           <img
             src={
