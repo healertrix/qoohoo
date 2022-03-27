@@ -6,37 +6,36 @@ import { ContentCard } from "./contentCard";
 import { gsap } from "gsap";
 export const Hero = () => {
   const boxRef = React.useRef();
-  
- 
-
 
   const [open, setOpen] = React.useState(false);
-  const [model, setModel] = React.useState("/model.jpg");
- function handleClick (e)  {
-   setModel(
-     "/man_model.jpg"
-   );
- };
-  
+  const [model, setModel] = React.useState("/modelb.jpg");
+  function handleClick(e) {
+    setModel("/modelblack.jpg");
+  }
+  function handleClickk(e) {
+    setModel("/man_model.jpg");
+  }
+  function handleClickkk(e) {
+    setModel("/modelemo.jpg");
+  }
   function activateLasers(e) {
     setOpen(!open);
     gsap.to(".box", { rotation: "+=360", y: "5vw", opacity: "0" });
-    gsap.to(".modelImage", { x: "25vw", duration: 1, scale: 1.1 });
+    gsap.to(".modelImage", { x: "25vw", duration: 1 });
     gsap.to(".cards", { x: "15vw", opacity: "0" });
-    gsap.to(".clothname", { y: "-15vw",x:"-6vw" });
+    gsap.to(".clothname", { y: "-15vw", x: "-6vw" });
     gsap.to(".cbody", { y: "-25vw", opacity: "1", duration: 1.3 });
     gsap.to(".cbodyy", { y: "-35vw", opacity: "1", duration: 1.3 });
 
     gsap.to(".addbtn", { y: "-15vw", opacity: 1, duration: 1 });
-    
   }
-  
-   React.useEffect(() => {
-     gsap.to(".summer", {
-       opacity: 1,
-       duration: 2.5,
-     });
-   });
+
+  React.useEffect(() => {
+    gsap.to(".summer", {
+      opacity: 1,
+      duration: 2.5,
+    });
+  });
 
   return (
     <>
@@ -78,7 +77,12 @@ export const Hero = () => {
           </div>
 
           <div className="modelImage">
-            <img src={model} className="max-w-md rounded-lg shadow-2xl" />
+            <img
+              src={
+                model
+              }
+              className="max-w-md rounded-lg shadow-2xl"
+            />
           </div>
           <div className=" box " onClick={activateLasers}>
             <img
@@ -88,7 +92,7 @@ export const Hero = () => {
             />
           </div>
           <div
-            className="addbtn drop-shadow-md box ml-2"
+            className="addbtn drop-shadow-md box ml-3"
             style={{ display: open ? "flex" : "none", opacity: 0 }}
           >
             <img
@@ -100,7 +104,7 @@ export const Hero = () => {
             />
           </div>
           <div className="clothname flex-col  lg:flex-row-reverse 	">
-            <p className="text-5xl "> Yellow Hoodie</p>
+            <p className="text-5xl "> Blue Hoodie</p>
           </div>
         </div>
       </div>
@@ -146,14 +150,19 @@ export const Hero = () => {
         </div>
       </div>
       <div
-        className="flex gap-4 cbody ml-2 mr-5 "
+        className="flex gap-4 cbody ml-5 mr-5 "
         style={{ display: open ? "flex" : "none", opacity: 0 }}
-        onClick={handleClick}
       >
-        <Corsel src="/man_model.jpg" />
-        <Corsel src="/man_model.jpg" />
-        <Corsel src="/man_model.jpg" />
+        <div onClick={handleClick}>
+          <Corsel src="/modelblack.jpg" />
+        </div>
+        <div onClick={handleClickk}>
+          <Corsel src="/man_model.jpg" />
+        </div>
+        <div onClick={handleClickkk}>
+          <Corsel src="/modelemo.jpg" />
+        </div>
       </div>
     </>
   );
-};;
+};;;
