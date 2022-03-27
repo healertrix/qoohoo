@@ -53,6 +53,18 @@ export const Hero = () => {
       duration: 2.5,
     });
   });
+  React.useEffect(() => {
+    gsap.fromTo(
+      ".manmod",
+      { opacity: 0.5, y: "-3.5vw" },
+      { opacity: 1, duration: 1, y: "0" }
+    );
+    gsap.fromTo(
+      ".themodel",
+      { opacity: 0.5, x: "-3.5vw" },
+      { opacity: 1, duration: 1, x: "0" }
+    );
+  });
 
   return (
     <>
@@ -60,7 +72,7 @@ export const Hero = () => {
         className="hero min-h-screen bg-base-200 	 "
         style={{ background: "white" }}
       >
-        <div className=" cards  " style={{ marginLeft: "88vw" }}>
+        <div className=" cards manmod " style={{ marginLeft: "88vw" }}>
           <img
             src={"/man_model.jpg"}
             className="max-w-xs		 rounded-lg shadow-xl z-0 "
