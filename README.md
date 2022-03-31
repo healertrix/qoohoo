@@ -1,4 +1,5 @@
 ## Getting Started
+to install all dependencies
 ```bash
 npm i
 ```
@@ -9,7 +10,7 @@ npm run dev
 # or
 yarn dev
 ```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.  You can
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. 
 
 <br /><br />
 Since the page is not responsive, here is the walkthrough of the website in case some unexpected behaviour is faced
