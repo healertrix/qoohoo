@@ -215,7 +215,7 @@ export const Hero = () => {
           />
           <p
             className="ml-10 text-xl "
-            style={{ color: "rgba(124, 181, 53, 1)" }}
+            style={{ color: "rgba(124, 181, 53, 1)", marginTop: "2.0vw" }}
           >
             {" "}
             Size Guide
@@ -237,7 +237,7 @@ export const Hero = () => {
       </div>
       <div
         className="flex gap-4 cbody ml-5 mr-5 "
-        style={{ display: open ? "flex" : "none", opacity: 0 }}
+        style={{ display: open ? "flex" : "none", opacity: 0 ,  marginTop: "-3.0vw" }}
       >
         <div onClick={handleClick}>
           <Corsel src="/modelblack.jpg" />
