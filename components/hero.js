@@ -171,8 +171,8 @@ export const Hero = () => {
             <img
               src="/addbttn.svg"
               alt=""
-              width="60"
-              height="60"
+              width="80"
+              height="80"
               className="hover:-translate-y-1 hover:scale-105 duration-300 drop-shadow-md	"
             />
           </div>
