@@ -171,12 +171,12 @@ export const Hero = () => {
             <img
               src="/addbttn.svg"
               alt=""
-              width="150"
-              height="150"
+              width="60"
+              height="60"
               className="hover:-translate-y-1 hover:scale-105 duration-300 drop-shadow-md	"
             />
           </div>
-          <div className="clothname flex-col  lg:flex-row-reverse 	">
+          <div className="clothname flex-col  lg:flex-row-reverse md:ml-20 2xl:ml-0 sm:ml-15	">
             <p className="text-5xl "> Blue Hoodie</p>
           </div>
         </div>
@@ -237,7 +237,11 @@ export const Hero = () => {
       </div>
       <div
         className="flex gap-4 cbody ml-5 mr-5 "
-        style={{ display: open ? "flex" : "none", opacity: 0 ,  marginTop: "-3.0vw" }}
+        style={{
+          display: open ? "flex" : "none",
+          opacity: 0,
+          marginTop: "-3.0vw",
+        }}
       >
         <div onClick={handleClick}>
           <Corsel src="/modelblack.jpg" />
