@@ -1,5 +1,7 @@
 ## Getting Started
-
+```bash
+npm i
+```
 To, run the server:
 
 ```bash

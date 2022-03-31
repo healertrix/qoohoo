@@ -240,7 +240,7 @@ export const Hero = () => {
         style={{
           display: open ? "flex" : "none",
           opacity: 0,
-          marginTop: "-3.0vw",
+          marginTop: "-5.0vw",
         }}
       >
         <div onClick={handleClick}>
