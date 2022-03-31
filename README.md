@@ -16,7 +16,7 @@ Since the page is not responsive, here is the walkthrough of the website in case
 
 Here are some pictures of website for reference 
 ![Start](https://ibb.co/H7hYsz6)
-![After animation](https://ibb.co/Ltt4yxd)
+![After animation](website1.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](website1.png) with your browser to see the result.
 
