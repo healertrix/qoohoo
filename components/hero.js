@@ -71,10 +71,31 @@ export const Hero = () => {
       { opacity: 0.5, y: "3.5vw" },
       { opacity: 1, duration: 1, y: "0" }
     );
+    gsap.fromTo(
+      ".svger",
+      { opacity: 0.5, y: "1vw" },
+      { opacity: 1, duration: 1, y: "0" }
+    );
+   gsap.to("#round", { rotation: "+=360", duration: 5,repeat:-1 });
+   
+
   });
 
   return (
     <>
+      <div className=" z-0" id="">
+        <img
+          src={"/arrow1.svg"}
+          className="cards "
+          id="arrow1"
+          style={{
+            marginLeft: "50vw",
+            marginTop: "-0.5vw",
+            height: "70%",
+            opacity: 0.5,
+          }}
+        />
+      </div>
       <div
         className="hero min-h-screen bg-base-200 	 "
         style={{ background: "white" }}
@@ -105,10 +126,27 @@ export const Hero = () => {
             <div className="flex-row mb-5 gap-5	cards ">
               <Card />
             </div>
-            <div></div>
+            <img
+              src={"/gola.svg"}
+              className="cards svger "
+              id="gola"
+              style={{
+                marginLeft: "10vw",
+                marginTop: "1.5vw",
+                height: "70%",
+                opacity: 1,
+              }}
+            />
             <div className="flex-row gap-5 cards 	 ">
               <Card />
-              <div></div>
+              <div className=" " id="">
+                <img
+                  src={"/round1.svg"}
+                  className="cards svger"
+                  id = "round"
+                  style={{ marginLeft: "-50vw", height: "70%", opacity: 0.8 }}
+                />
+              </div>{" "}
             </div>
           </div>
 
