@@ -76,7 +76,8 @@ export const Hero = () => {
       { opacity: 0.5, y: "1vw" },
       { opacity: 1, duration: 1, y: "0" }
     );
-   gsap.to("#round", { rotation: "+=360", duration: 5,repeat:-1 });
+    gsap.to("#round", { rotation: "+=720", duration: 15, repeat: -1 });
+    gsap.to("#triangle", { rotation: "+=720", duration: 100, repeat: -1 });
    
 
   });
@@ -85,9 +86,9 @@ export const Hero = () => {
     <>
       <div className=" z-0" id="">
         <img
-          src={"/arrow1.svg"}
+          src={"/triangle.svg"}
           className="cards "
-          id="arrow1"
+          id="triangle"
           style={{
             marginLeft: "50vw",
             marginTop: "-0.5vw",
@@ -143,7 +144,7 @@ export const Hero = () => {
                 <img
                   src={"/round1.svg"}
                   className="cards svger"
-                  id = "round"
+                  id="round"
                   style={{ marginLeft: "-50vw", height: "70%", opacity: 0.8 }}
                 />
               </div>{" "}
@@ -219,6 +220,19 @@ export const Hero = () => {
             {" "}
             Size Guide
           </p>
+          <div className="">
+            <img
+              src={"/triangle.svg"}
+              className="cards "
+              id="triangle"
+              style={{
+                marginLeft: "30vw",
+                marginTop: "3.5vw",
+                height: "56%",
+                opacity: 1,
+              }}
+            />
+          </div>
         </div>
       </div>
       <div
