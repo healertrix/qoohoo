@@ -1,5 +1,5 @@
 ## Getting Started
-to install all dependencies
+To install all dependencies
 ```bash
 npm i
 ```
