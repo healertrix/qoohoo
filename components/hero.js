@@ -223,7 +223,7 @@ export const Hero = () => {
           <div className="">
             <img
               src={"/triangle.svg"}
-              className="cards "
+              className=" "
               id="triangle"
               style={{
                 marginLeft: "30vw",
